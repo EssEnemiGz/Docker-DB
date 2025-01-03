@@ -29,7 +29,7 @@ services:
   # Flask Backend Service
   flask:
     build: 
-      context: ./backend
+      context: ./
       dockerfile: DockerFile
     container_name: goshopping_server
     environment:
@@ -48,4 +48,4 @@ services:
     restart: unless-stopped
     volumes:
       # Mount application code for development
-      - ./backend:/app
+      - ./:/app
